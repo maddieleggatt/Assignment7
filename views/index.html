@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Favorites Organizer powered by Cloudant</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="stylesheet" href="/style/style.css" />
+</head>
+<body>
+	<div class = "container">
+	<div class = "banner">
+		<img class="newappIcon" src="images/newapp-icon.png">
+		<p class = "appTitle">
+			Favorites Organizer powered by Cloudant
+		</p>
+		
+	</div>
+	<p> 
+		<br>"express": "4.15.x", Express is a framework for node.js 
+		<br>"ejs": "2.5.x", This is a template for Javascript 
+		<br>	"cloudant": "1.7.x", This is the official Cloudant library for Node.js
+		<br>	"body-parser": "1.17.x", Node.js is body parsing middleware
+		<br>	"method-override": "2.3.x", Lets you use HTTP verbs such as PUT or DELETE in places where the client doesn't support it.
+		<br>	"morgan": "1.8.x", HTTP request logger middleware for node.js
+		<br>	"errorhandler": "1.5.x", Development-only error handler middleware. When an object is provided to Express as an error, this module will display as much about this object as possible, and will do so by using content negotiation for the response between HTML, JSON, and plain text.
+		<br>	"connect-multiparty": "2.0.x" This middleware will create temp files on your server and never clean them up.	
+			</p>
+
+	<section>
+		<table id='notes' class='records' border='0' cellspacing='0' cellpadding='0'><tbody></tbody></table>
+	</section>
+	<footer>
+		<div>
+			<!-- <button class='detailBtn' onclick="toggleServiceInfo()" title='Service information'>
+				<img src='images/detail.png' alt='detail'/>
+			-->
+			<button class="addBtn" onclick="addItem()" title="add record">
+				<img src="images/add.png" alt="add">
+			</button>
+			<br>
+			<a class = "infoImg" onclick="toggleAppInfo()">Help</a>
+		</div>
+		<div id='appinfo' class = 'appinfo' style='display: none;'>
+						This application helps you organize your favorite files.</br>
+						Supports all file types, like Audio, Video, Photos, Text etc.</br>
+						Click on Add icon to create a new category for your files. Provide a title and description for the category in the text fields.</br>
+						To add a file to a given category, Click on 'Browse' button to select a file, and 'Upload' button to upload the file.
+						To modify a title or description, Edit the text and press Enter.</br>
+						You can add multiple files (of any type) to a category.</br>
+						Click on <span class = 'deleteBtn' alt='delete'></span> icon to delete the category.
+		</div>
+		<div id="loadingImage"></div>
+		<br><br><br><br><br>
+		<div id="errorDiv" class='errorMsg'></div>
+	</footer>
+	<script type="text/javascript" src="/scripts/util.js"></script>
+	<script type="text/javascript" src="/scripts/index.js"></script>
+	<div id="myImage"><div id="innerImg"></div></div>
+	<br><br><br>
+	</div>
+
+</body>
+</html>
