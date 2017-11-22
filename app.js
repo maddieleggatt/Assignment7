@@ -8,6 +8,15 @@ var express = require('express'),
     http = require('http'),
     path = require('path'),
     fs = require('fs');
+
+    //Authentication module.
+    var auth = require('http-auth');
+    var basic = auth.basic({
+    	realm: "auth-db",
+    	file: __dirname + "/public/data/passwords"
+    });
+    
+    console.log(basic);
     
 var app = express();
 
